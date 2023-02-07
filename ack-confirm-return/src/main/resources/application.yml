@@ -1,0 +1,17 @@
+server:
+  port: 8002
+spring:
+  rabbitmq:
+    host: 192.168.74.128
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: / # 虚拟主机
+    listener:
+      simple:
+        acknowledge-mode: manual # 手动应答
+    publisher-confirm-type: simple # 启用 confirm 机制
+    publisher-returns: true # 启用 return 机制
+logging:
+  level:
+    com.lss.provider: debug
